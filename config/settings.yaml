@@ -1,0 +1,25 @@
+# JSearch - System Settings
+version: "1.0.0"
+
+processing:
+  auto_enrich: false
+  max_jobs_per_batch: 50
+  duplicate_detection: true
+  duplicate_key: "linkedin_url"
+
+scoring:
+  weights:
+    role_match: 0.30
+    skills_match: 0.25
+    industry_fit: 0.15
+    location_remote: 0.15
+    company_signals: 0.15
+
+dashboard:
+  theme: "dark"
+  default_sort: "score_desc"
+
+routine:
+  enabled: false
+  schedule: "0 8 * * 1-5"
+  notify_threshold: 70

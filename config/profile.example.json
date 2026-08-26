@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+
+  "identity": {
+    "full_name": "Alex Rivera",
+    "birth_date": "1990-04-12",
+    "email": "alex.rivera@example.com",
+    "phone": "+1 555 0142",
+    "location": "Lisbon, Portugal",
+    "linkedin": "linkedin.com/in/alex-rivera-example",
+    "website": "alexrivera.example",
+    "github": "github.com/alexrivera-example",
+    "languages": [
+      { "language": "English", "level": "native" },
+      { "language": "Portuguese", "level": "B2" },
+      { "language": "Spanish", "level": "B1" }
+    ]
+  },
+
+  "current_role": {
+    "title": "Senior Backend Engineer",
+    "company": "Northwind Logistics",
+    "industry": "Supply Chain SaaS",
+    "years_in_role": 3
+  },
+
+  "total_experience_years": 9,
+
+  "professional_summary": "Backend engineer with 9 years building and running distributed systems for logistics and payments. Currently at Northwind Logistics, where I own the shipment tracking platform that serves 4,000 requests per second and cut median latency from 480ms to 90ms. Before that, 4 years at Kestrel Payments on the ledger team, where I led the migration from a monolith to 6 services with zero downtime. Comfortable owning a system end to end: schema design, deploys, on-call, and the postmortem afterwards.",
+
+  "work_history": [
+    {
+      "company": "Northwind Logistics",
+      "title": "Senior Backend Engineer",
+      "period": "2023 - Present",
+      "location": "Remote, Portugal",
+      "highlights": [
+        "Own the shipment tracking platform: 4,000 req/s peak, 99.97% availability over the last 12 months",
+        "Cut median API latency from 480ms to 90ms by replacing per-request joins with a materialized read model",
+        "Introduced trunk-based development and a 12-minute CI pipeline; deploy frequency went from weekly to 14 per day",
+        "Mentored 3 engineers through their first on-call rotation"
+      ],
+      "skills_used": ["Go", "PostgreSQL", "Kafka", "Kubernetes", "Terraform", "Datadog"]
+    },
+    {
+      "company": "Kestrel Payments",
+      "title": "Backend Engineer, Ledger",
+      "period": "2019 - 2023",
+      "location": "Berlin, Germany",
+      "highlights": [
+        "Led the decomposition of the payments monolith into 6 services with zero customer-facing downtime",
+        "Built the double-entry ledger that reconciles 2.1M transactions per day",
+        "Reduced end-of-month close from 3 days to 4 hours by making reconciliation incremental"
+      ],
+      "skills_used": ["Python", "Go", "PostgreSQL", "gRPC", "AWS"]
+    },
+    {
+      "company": "Tidepool Software",
+      "title": "Software Engineer",
+      "period": "2016 - 2019",
+      "location": "Dublin, Ireland",
+      "highlights": [
+        "Built REST and GraphQL APIs for a B2B analytics product used by 200 customers",
+        "First engineer on the data export feature that became the top-requested paid add-on"
+      ],
+      "skills_used": ["Python", "Django", "GraphQL", "Redis"]
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "BSc Computer Science",
+      "institution": "University College Dublin",
+      "period": "2012 - 2016",
+      "notes": "Distributed systems, compilers, final project on consensus protocols"
+    }
+  ],
+
+  "skills": {
+    "technical": ["Go", "Python", "SQL", "gRPC", "GraphQL", "Distributed systems", "Event-driven architecture", "Performance profiling"],
+    "domain": ["Payments", "Double-entry ledgers", "Logistics and tracking", "Observability", "Incident response"],
+    "tools": ["PostgreSQL", "Kafka", "Kubernetes", "Terraform", "AWS", "Datadog", "GitHub Actions"],
+    "soft": ["Mentoring", "Technical writing", "Incident command", "Cross-team collaboration"]
+  },
+
+  "certifications": [
+    "Certified Kubernetes Administrator (CKA), 2022"
+  ],
+
+  "notable_achievements": [
+    { "metric": "480ms to 90ms median latency", "context": "Shipment tracking platform at Northwind Logistics" },
+    { "metric": "Zero-downtime monolith split into 6 services", "context": "Ledger team at Kestrel Payments" },
+    { "metric": "2.1M transactions per day reconciled", "context": "Double-entry ledger at Kestrel Payments" },
+    { "metric": "Deploy frequency 1/week to 14/day", "context": "CI and trunk-based development at Northwind Logistics" }
+  ],
+
+  "work_preferences": {
+    "remote_ok": true,
+    "hybrid_ok": true,
+    "onsite_ok": false,
+    "willing_to_relocate": false,
+    "timezone_flexibility": "Can overlap with US Eastern until 6pm WET",
+    "notice_period": "1 month",
+    "work_authorization": "EU citizen, no sponsorship needed in the EU"
+  },
+
+  "salary_expectations": {
+    "min": 95000,
+    "max": 130000,
+    "currency": "EUR",
+    "period": "year",
+    "notes": "Flexible for equity-heavy offers at seed or Series A"
+  },
+
+  "narrative_rules": {
+    "lead_with_company": "Northwind Logistics",
+    "de_emphasize_companies": ["Tidepool Software"],
+    "fact_guards": [
+      { "claim": "480ms to 90ms median latency", "owner": "Northwind Logistics" },
+      { "claim": "2.1M transactions per day", "owner": "Kestrel Payments" }
+    ],
+    "style_bans": ["em dashes", "the word passionate", "the phrase results-driven"]
+  },
+
+  "search_criteria": {
+    "target_roles": {
+      "titles": [
+        "Senior Backend Engineer",
+        "Staff Engineer",
+        "Platform Engineer",
+        "Principal Engineer",
+        "Engineering Manager"
+      ],
+      "seniority": ["senior", "lead", "manager"]
+    },
+    "target_industries": {
+      "preferred": ["B2B SaaS", "FinTech", "Developer Tools", "Logistics"],
+      "acceptable": ["Marketplaces", "HealthTech", "Enterprise Software"],
+      "avoid": ["Gambling", "Adtech"]
+    },
+    "location_preferences": {
+      "preferred_locations": ["Remote", "Lisbon, Portugal", "Portugal"],
+      "acceptable_regions": ["EU (Remote)", "UK (Remote)", "US (Remote, EU-friendly hours)"],
+      "excluded_locations": []
+    },
+    "company_preferences": {
+      "size": { "min_employees": 30, "max_employees": null },
+      "stage": {
+        "preferred": ["growth", "scale-up"],
+        "acceptable": ["startup", "enterprise"]
+      },
+      "culture_signals": {
+        "positive": ["remote-first", "async communication", "written culture", "engineers on call for their own code"],
+        "negative": ["return to office mandate", "no remote", "unlimited PTO with no minimum"]
+      }
+    },
+    "deal_breakers": [
+      "On-site only with no remote option",
+      "Requires US work authorization without sponsorship",
+      "Junior or entry-level role",
+      "No engineering ownership of production"
+    ],
+    "bonus_signals": [
+      "Go or Rust in the stack",
+      "Public engineering blog",
+      "Open source contributions",
+      "Documented incident review process"
+    ],
+    "minimum_score": 50,
+    "auto_prepare_threshold": 85,
+    "materials_language": "English"
+  }
+}

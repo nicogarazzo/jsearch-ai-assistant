@@ -1,0 +1,28 @@
+# Your data. Never commit any of this.
+config/profile.json
+config/profile.yaml
+config/search-criteria.yaml
+applications/*
+!applications/.gitkeep
+inbox/clay-exports/*
+!inbox/clay-exports/.gitkeep
+inbox/manual/*
+!inbox/manual/.gitkeep
+dashboard/index.html
+logs/runs/*
+!logs/runs/.gitkeep
+
+# Generated
+*.pdf
+*.docx
+*.header.tex
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
