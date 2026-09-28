@@ -57,6 +57,14 @@ config/profile.json  --(scripts/import_profile.py)-->  config/profile.yaml
 
 ## Daily use
 
+**0. Build the list (optional).** No job export yet? Run:
+
+```
+/build-job-list
+```
+
+It turns your profile into two ready-to-paste prompts in `search-prompts/`: one for Clay, if you have it, and one for any LLM with web search (Claude, ChatGPT, Gemini, Perplexity). Both return a CSV in the format the next step reads, and the web one keeps going when you say "more". Or ask Claude Code to run the search for you.
+
 **1. Add job listings.** Drop a CSV into `inbox/clay-exports/`. Any export with column headers works. `Job Title` is the only required column; `Company Name`, `Location`, `Company Domain`, `Job LinkedIn URL` and `Posted On` are used when present. There is a working file in `examples/sample-jobs.csv` to try it with.
 
 For a one-off posting, paste it into a text file in `inbox/manual/`.
@@ -130,11 +138,13 @@ config/
 inbox/
   clay-exports/         Drop CSVs here.
   manual/               Drop single postings here.
+search-prompts/         Generated Clay and web-search prompts. Gitignored.
 applications/           One folder per job. Gitignored.
 dashboard/index.html    Generated, self-contained, no external requests.
 templates/              Base CV and cover letter.
 scripts/
   import_profile.py     profile.json -> the two config YAMLs.
+  build_search_prompt.py  Criteria -> Clay and web-search prompts.
   process_inbox.py      CSV -> application folders.
   generate_dashboard.py Rebuild the dashboard.
   generate_pdf.py       Markdown -> PDF via pandoc and xelatex.
@@ -147,6 +157,8 @@ Python is standard library plus PyYAML. Every path is relative to the project ro
 ## Privacy
 
 Everything runs locally. `config/profile.json`, `applications/`, `inbox/` and `dashboard/index.html` are gitignored, so a `git push` from your fork cannot leak your CV or your job search. Job postings are fetched from the web when you ask for analysis; nothing about you is uploaded anywhere Claude Code does not already go.
+
+One leak the gitignore cannot stop: GitHub issues and comments. If you fork this repo publicly, do not track your applications in its issues. Recruiter names, salary numbers and negotiation notes there are public, and editing them leaves the old text in the edit history. `CLAUDE.md` tells the assistant never to do it.
 
 ## License
 
