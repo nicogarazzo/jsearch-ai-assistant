@@ -8,6 +8,8 @@ inbox/clay-exports/*
 !inbox/clay-exports/.gitkeep
 inbox/manual/*
 !inbox/manual/.gitkeep
+search-prompts/*
+!search-prompts/.gitkeep
 dashboard/index.html
 logs/runs/*
 !logs/runs/.gitkeep

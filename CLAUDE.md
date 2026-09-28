@@ -36,6 +36,16 @@ dashboard theme.
 ### "Set up my JSearch profile"
 Run the setup interview. See the Setup Flow section at the bottom.
 
+### "Build my job list" / "Find jobs for me"
+1. `python3 scripts/build_search_prompt.py` writes two prompts from
+   `search-criteria.yaml` into `search-prompts/` (gitignored):
+   `clay.md` for users with Clay, `web-search.md` for any LLM with web search.
+2. Ask whether they have Clay and show the matching prompt.
+3. Without Clay, offer to run the web search here with WebSearch. Every row
+   needs a posting URL that was actually opened; never invent one.
+4. The result is a CSV with the headers `process_inbox.py` reads. Save it in
+   `inbox/clay-exports/` and continue with "Process my inbox".
+
 ### "Process my inbox" / "Check for new jobs"
 1. `python3 scripts/process_inbox.py` (add `--dry-run` to preview)
 2. For each folder created with status `new`, analyze it against the profile:
