@@ -165,6 +165,12 @@ job URL. Processed files are renamed to `*.processed.csv`.
 - Dates in ISO 8601. YAML at 2-space indentation.
 - `config/profile.json` and everything under `applications/` is the user's
   private data. Never commit it, never send it anywhere.
+- The same data never goes into GitHub issues, PR descriptions or comments on
+  this repo or a fork of it. Recruiter names, emails, salary figures and
+  negotiation notes posted there are public on a public repo, and an edit keeps
+  the old text in the edit history. When a session has no access to
+  `applications/`, it hands the status update to the user in chat, not to an
+  issue.
 
 ## Setup flow
 Run when the user says "Set up my JSearch profile" or invokes `/setup-profile`.

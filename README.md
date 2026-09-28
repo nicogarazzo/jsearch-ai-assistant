@@ -148,6 +148,8 @@ Python is standard library plus PyYAML. Every path is relative to the project ro
 
 Everything runs locally. `config/profile.json`, `applications/`, `inbox/` and `dashboard/index.html` are gitignored, so a `git push` from your fork cannot leak your CV or your job search. Job postings are fetched from the web when you ask for analysis; nothing about you is uploaded anywhere Claude Code does not already go.
 
+One leak the gitignore cannot stop: GitHub issues and comments. If you fork this repo publicly, do not track your applications in its issues. Recruiter names, salary numbers and negotiation notes there are public, and editing them leaves the old text in the edit history. `CLAUDE.md` tells the assistant never to do it.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
